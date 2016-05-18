@@ -1,9 +1,10 @@
 var boxSize = 12;
 var numBoxes = (460800 / (boxSize * boxSize));
-var color = randColor()
-var newBox = "<div class='box'></div>";
+var color = 'hsl(0, 0%, 20%)'
+var id = Math.floor((1 + Math.random()) * 0x10000);
+var newBox = "<div class='box' id=" + id + " ></div>";
 
-function boxGen(boxSize) {
+function boxGen() {
 $('#container').empty();
 $('#container').append($(Array(460800 / (boxSize * boxSize)).join(newBox)));
 $('.box').css({"height": boxSize + "px", "width" : boxSize + "px"});
@@ -19,8 +20,7 @@ $(document).ready(function(){
   boxGen(boxSize);
 
   $('.box').mouseenter(function(){
-    $(this).css('background-color', randColor());
-
+    $(this).css('background-color', color);
   })
 
   $('#shake').click(function(){
@@ -33,16 +33,17 @@ $(document).ready(function(){
       boxSize += 4;
     } else{
       boxSize = 8;
-    }
+    };
     boxGen(boxSize);
   });
 
-  $('#rainbow').click(function(){
-    if(color != 20){
-      color += 4;
-    } else{
-      color = 8;
-    }
-  });
+  // $('#rainbow').click(function(){
+  //   if(color != 20){
+  //     color += 4;
+  //   } else{
+  //     color = 8;
+  //   }
+  // });
+
 
 });
