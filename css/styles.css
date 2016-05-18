@@ -4,12 +4,12 @@ body{
 }
 
 #border{
-  background-color: rgb(171,1,4);
-  position: fixed;
+  background-color: hsl(358, 98%, 33%);
+  position: absolute;
   padding: 50px;
   left: 50%;
   margin-left: -530px;
-  margin-top: 25px;
+  top: 25px;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 5px 5px 3px hsla(0, 0%, 0%, 0.44);
@@ -62,5 +62,25 @@ body{
   color: gold;
   font-family: 'Pacifico', monospace;
   transform: scale(1.8,1);
+}
 
+.clicky{
+  background-color: hsla(0, 0%, 33%, 0.15);
+  border: 1px solid hsla(0, 0%, 33%, 0.15);
+  color: hsla(209, 100%, 87%, 0.45);
+  font-family:arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 10px;
+  left:50%;
+  width: 140px;
+  height: 30px;
+  margin-left: -70px;
+  overflow: hidden;
+}
+
+.click:active{
+  
 }
