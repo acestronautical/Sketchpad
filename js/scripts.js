@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
-  var boxSize = prompt('size of boxes?');
+  var boxSize = 20;
   var numBoxes = (460800 / (boxSize * boxSize));
   var container = $('#container');
-  var newBox = "<div class='box' onmouseover='this.style.backgroundColor = \"black\";' id='[id]' ></div>";
+  var newBox = "<div class='box' onmouseover='this.style.backgroundColor = \"rgb(46, 46, 46)\";' id='[id]' ></div>";
 
   for(i = 1; i <= numBoxes; i++){
     container.append(newBox.replace('[id]', i));
