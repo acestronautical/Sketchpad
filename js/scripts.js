@@ -18,6 +18,11 @@ $(document).ready(function(){
 
   boxGen(boxSize);
 
+  $('.box').mouseenter(function(){
+    $(this).css('background-color', randColor());
+
+  })
+
   $('#shake').click(function(){
     $( "#border" ).effect( "shake" );
     $('.box').css('background-color', 'white');
