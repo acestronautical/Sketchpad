@@ -82,7 +82,7 @@ body{
 }
 
 .leftButton{
-  background-image:url('/home/lappy/the_odin_project/Sketchpad/images/grid.png');
+  background-image:url('../../Sketchpad/images/grid.png');
   border-radius: 50%;
   position: absolute;
   top: 35px;
