@@ -3,7 +3,7 @@ var numBoxes = (460800 / (boxSize * boxSize));
 var color = 'rgb(46, 46, 46)'
 var newBox = "<div class='box' onmouseover='this.style.backgroundColor = \"" + color + "\";' id='[id]' ></div>";
 
-function boxGen(boxSize) {
+function boxGen() {
 $('#container').empty();
 
 $('#container').append($(Array(460800 / (boxSize * boxSize)).join(newBox)));
@@ -22,7 +22,7 @@ $(document).ready(function(){
   });
 
   $('#gridSize').click(function(){
-    boxGen(boxSize);
+    boxGen();
   });
 
 });
