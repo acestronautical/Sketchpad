@@ -83,6 +83,7 @@ body{
 
 .leftButton{
   background-image:url('../../Sketchpad/images/grid.png');
+  border: hsla(209, 100%, 87%, 0.45);
   border-radius: 50%;
   position: absolute;
   top: 35px;
