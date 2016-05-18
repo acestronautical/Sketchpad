@@ -82,13 +82,15 @@ body{
 }
 
 .leftButton{
-  background-image:url('../../Sketchpad/images/grid.png');
-  border: 1px solid grey;
   border-radius: 50%;
   position: absolute;
-  top: 35px;
   left:35px;
   width: 35px;
   height: 35px;
   overflow: hidden;
+}
+
+#gridSize{
+  background-image:url('https://raw.githubusercontent.com/Ace-Cassidy/Sketchpad/master/images/grid.png');
+  top: 35px;
 }
