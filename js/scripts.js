@@ -2,7 +2,8 @@ var boxSize = 12;
 var numBoxes = (460800 / (boxSize * boxSize));
 var color = 'hsl(0, 0%, 20%)'
 var id = Math.floor((1 + Math.random()) * 0x10000);
-var newBox = "<div class='box' id=" + id + " ></div>";
+var newBox = "<div class='box' id=" + id + "  ></div>";
+var toggle = 0;
 
 function boxGen() {
 $('#container').empty();
@@ -10,9 +11,16 @@ $('#container').append($(Array(460800 / (boxSize * boxSize)).join(newBox)));
 $('.box').css({"height": boxSize + "px", "width" : boxSize + "px"});
 };
 
-function randColor(){
- var rint = Math.round(0xffffff * Math.random());
- return 'rgb(' + (rint >> 16) + ',' + (rint >> 8 & 255) + ',' + (rint & 255) + ')';
+function randToggle(){
+
+  var rint = Math.round(0xffffff * Math.random());
+  var randomColor = 'rgb(' + (rint >> 16) + ',' + (rint >> 8 & 255) + ',' + (rint & 255) + ')';
+  var black = 'hsl(0, 0%, 20%)';
+  if(toggle == 1){
+    return(randomColor);
+  } else{
+    return(black);
+  }
 };
 
 $(document).ready(function(){
@@ -20,7 +28,7 @@ $(document).ready(function(){
   boxGen(boxSize);
 
   $('.box').mouseenter(function(){
-    $(this).css('background-color', color);
+    $(this).css('background-color', randToggle());
   })
 
   $('#shake').click(function(){
@@ -35,15 +43,19 @@ $(document).ready(function(){
       boxSize = 8;
     };
     boxGen(boxSize);
+
+    $('.box').mouseenter(function(){
+      $(this).css('background-color', randToggle());
+    });
   });
 
-  // $('#rainbow').click(function(){
-  //   if(color != 20){
-  //     color += 4;
-  //   } else{
-  //     color = 8;
-  //   }
-  // });
+  $('#rainbow').click(function(){
+    if(toggle === 1){
+      toggle = 0;
+    } else{
+      toggle = 1;
+    }
+  });
 
 
 });
