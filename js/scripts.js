@@ -2,7 +2,9 @@ var boxSize = 12;
 var numBoxes = (460800 / (boxSize * boxSize));
 var id = Math.floor((1 + Math.random()) * 0x10000);
 var newBox = "<div class='box' id=" + id + "  ></div>";
+
 var toggle = 'black';
+var pickerColor = 'rgb(208, 73, 246)';
 
 function boxGen() {
 $('#container').empty();
@@ -25,6 +27,8 @@ function randToggle(color){
     return(shade);
   } else if(toggle === 'unshading'){
     return(unshade);
+  } else if(toggle === 'picker'){
+    return(pickerColor);
   }
 };
 
@@ -56,6 +60,14 @@ $(document).ready(function(){
     } else if(toggle == 'shading'){
       toggle = 'unshading';
     }
+  });
+
+  $('#colorPicker').click(function(){
+    if(toggle != 'picker'){
+      toggle = 'picker';
+    }
+    console.log(pickerColor);
+    pickerColor = ('#0' + Math.round(0xffffff * Math.random()).toString(16)).replace(/^#0([0-9a-f]{6})$/i, '#$1');;
   });
 
   $('#gridSize').click(function(){

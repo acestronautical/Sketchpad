@@ -86,7 +86,8 @@ body{
 
 .leftButton{
   border-radius: 50%;
-  position: absolute;
+  position: relative;
+  margin-top: 50px;
   left:35px;
   width: 35px;
   height: 35px;
@@ -95,15 +96,17 @@ body{
 
 #gridSize{
   background-image:url('https://raw.githubusercontent.com/Ace-Cassidy/Sketchpad/master/images/grid.png');
-  top: 35px;
+  margin-top: 100px;
+}
+
+#colorPicker{
+  background-image:url('https://raw.githubusercontent.com/Ace-Cassidy/Sketchpad/master/images/rainbow.png');
 }
 
 #rainbow{
   background-image:url('https://raw.githubusercontent.com/Ace-Cassidy/Sketchpad/master/images/rainbow.png');
-  top: 105px;
 }
 
 #shading{
   background-image:url('https://raw.githubusercontent.com/Ace-Cassidy/Sketchpad/master/images/shade.png');
-  top: 175px;
 }
