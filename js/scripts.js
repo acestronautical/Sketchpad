@@ -2,9 +2,8 @@ var boxSize = 12;
 var numBoxes = (460800 / (boxSize * boxSize));
 var id = Math.floor((1 + Math.random()) * 0x10000);
 var newBox = "<div class='box' id=" + id + "  ></div>";
-
 var toggle = 'black';
-var pickerColor = 'rgb(208, 73, 246)';
+var pickerColor = 'rgb(example, example, example)';
 
 function boxGen() {
 $('#container').empty();
@@ -57,12 +56,8 @@ $(document).ready(function(){
   $('#shading').click(function(){
     if(toggle != 'shading'){
       toggle = 'shading';
-      $('#shading').css("background-color",
-      "url('https://raw.githubusercontent.com/Ace-Cassidy/Sketchpad/master/images/shade.png');"
     } else if(toggle == 'shading'){
       toggle = 'unshading';
-      $('#shading').css("background-color",
-      "url('https://raw.githubusercontent.com/Ace-Cassidy/Sketchpad/master/images/unshade.png');"
     }
   });
 

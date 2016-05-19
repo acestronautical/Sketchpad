@@ -115,7 +115,7 @@ body{
 
 #colorPicker{
   background-image:url('https://raw.githubusercontent.com/Ace-Cassidy/Sketchpad/master/images/picker.png');
-  background-color: blue;
+  background-color: rgb(84, 66, 199);
 }
 
 #rainbow{
