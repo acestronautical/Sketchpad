@@ -16,7 +16,7 @@ function randToggle(){
   var rint = Math.round(0xffffff * Math.random());
   var randomColor = 'rgb(' + (rint >> 16) + ',' + (rint >> 8 & 255) + ',' + (rint & 255) + ')';
   var black = 'hsl(0, 0%, 20%)';
-  if(toggle == 1){
+  if(toggle === 'rainbow'){
     return(randomColor);
   } else{
     return(black);
@@ -50,10 +50,10 @@ $(document).ready(function(){
   });
 
   $('#rainbow').click(function(){
-    if(toggle === 1){
-      toggle = 0;
-    } else{
-      toggle = 1;
+    if(toggle != 'rainbow'){
+      toggle = 'rainbow';
+    } else if(toggle == 'rainbow'){
+      toggle = 'black';
     }
   });
 
