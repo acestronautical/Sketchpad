@@ -16,12 +16,15 @@ function randToggle(color){
   var black = 'rgb(48, 48, 48)';
   var rgbArray = color.substring(4, color.length-1).replace(/ /g, '').split(',');
   var shade = "rgb("+ (parseInt(rgbArray[0]) - 30) +"," + (parseInt(rgbArray[1]) - 30) + "," + (parseInt(rgbArray[2]) - 30) + ")";
+  var unshade = "rgb("+ (parseInt(rgbArray[0]) + 30) +"," + (parseInt(rgbArray[1]) + 30) + "," + (parseInt(rgbArray[2]) + 30) + ")";
   if(toggle === 'rainbow'){
     return(randomColor);
   } else if(toggle === 'black'){
     return(black);
   } else if(toggle === 'shading'){
     return(shade);
+  } else if(toggle === 'unshading'){
+    return(unshade);
   }
 };
 
@@ -51,7 +54,7 @@ $(document).ready(function(){
     if(toggle != 'shading'){
       toggle = 'shading';
     } else if(toggle == 'shading'){
-      toggle = 'black';
+      toggle = 'unshading';
     }
   });
 
