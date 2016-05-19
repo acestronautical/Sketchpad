@@ -4,7 +4,10 @@ body{
 }
 
 #border{
-  background-color: hsl(358, 98%, 33%);
+  background:radial-gradient(
+      hsl(358, 80%, 62%),
+      hsl(358, 98%, 33%)
+    );
   position: absolute;
   padding: 50px;
   left: 50%;
