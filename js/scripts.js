@@ -66,8 +66,9 @@ $(document).ready(function(){
     if(toggle != 'picker'){
       toggle = 'picker';
     }
-    console.log(pickerColor);
-    pickerColor = ('#0' + Math.round(0xffffff * Math.random()).toString(16)).replace(/^#0([0-9a-f]{6})$/i, '#$1');;
+    pickerColor = ('#0' + Math.round(0xffffff * Math.random()).toString(16)).replace(/^#0([0-9a-f]{6})$/i, '#$1');
+    $('#colorPicker').css('background-color', pickerColor);
+
   });
 
   $('#gridSize').click(function(){
