@@ -57,8 +57,12 @@ $(document).ready(function(){
   $('#shading').click(function(){
     if(toggle != 'shading'){
       toggle = 'shading';
+      $('#shading').css("background-color",
+      "url('https://raw.githubusercontent.com/Ace-Cassidy/Sketchpad/master/images/shade.png');"
     } else if(toggle == 'shading'){
       toggle = 'unshading';
+      $('#shading').css("background-color",
+      "url('https://raw.githubusercontent.com/Ace-Cassidy/Sketchpad/master/images/unshade.png');"
     }
   });
 
