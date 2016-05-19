@@ -65,6 +65,16 @@ body{
   color: gold;
   font-family: 'Pacifico', monospace;
   transform: scale(1.8,1);
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+#itMustBeGold:hover{
+  cursor: default;
 }
 
 #shake{
@@ -92,6 +102,10 @@ body{
   width: 35px;
   height: 35px;
   overflow: hidden;
+}
+
+.leftButton:hover{
+  cursor: pointer;
 }
 
 #gridSize{
