@@ -101,7 +101,7 @@ body{
 }
 
 #shading{
-  /*background-image:url('https://raw.githubusercontent.com/Ace-Cassidy/Sketchpad/master/images/shading.png');*/
+  background-image:url('https://raw.githubusercontent.com/Ace-Cassidy/Sketchpad/master/images/shade.png');
   border: 1px solid black;
   top: 175px;
 }
