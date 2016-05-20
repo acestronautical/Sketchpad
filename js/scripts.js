@@ -7,7 +7,7 @@ var pickerColor = 'rgb(example, example, example)';
 
 function boxGen() {
 $('#container').empty();
-$('#container').append($(Array(460800 / (boxSize * boxSize)).join(newBox)));
+$('#container').append($(Array((460800 / (boxSize * boxSize)) + 1).join(newBox)));
 $('.box').css({"height": boxSize + "px", "width" : boxSize + "px"});
 };
 
