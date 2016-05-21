@@ -28,6 +28,9 @@ body{
   background-color: white;
 }
 
+#container1{
+  display: block;
+}
 
 .box{
 
@@ -116,7 +119,7 @@ body{
 
 #colorPicker{
   background-image:url('https://raw.githubusercontent.com/Ace-Cassidy/Sketchpad/master/images/picker.png');
-  background-color: rgb(84, 66, 199);
+  background-color: rgb(189, 223, 255);
 }
 
 #rainbow{
