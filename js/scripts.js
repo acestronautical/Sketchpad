@@ -42,7 +42,7 @@ function draw(clickToggle){
 
 function colorToggle(color){
   var rint = Math.round(0xffffff * Math.random());
-  var randomColor = ('#0' + rint.toString(16)).replace(/^#0([0-9a-f]{6})$/i, '#$1');
+  var randomColor = ('#' + rint.toString(16));
   var black = 'rgb(48, 48, 48)';
   var rgbArray = color.substring(4, color.length-1).replace(/ /g, '').split(',');
   var shade = "rgb("+ (parseInt(rgbArray[0]) - 30) +"," + (parseInt(rgbArray[1]) - 30) + "," + (parseInt(rgbArray[2]) - 30) + ")";
