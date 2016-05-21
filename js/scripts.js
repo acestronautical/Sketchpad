@@ -4,7 +4,8 @@ var id = Math.floor((1 + Math.random()) * 0x10000);
 var newBox = "<div class='box' ></div>";
 var toggle = 'black';
 var pickerColor = 'rgb(example, example, example)';
-var oneToFour = 1
+var oneToFour = 1;
+var clickToggle = true;
 
 function boxGen() {
 for(i = 1; i <=4; i++){
@@ -23,7 +24,23 @@ $(".container").css('display', 'none');
 $("#container" + parseInt(whichContainer)).css('display', 'block');
 };
 
-function randToggle(color){
+function draw(clickToggle){
+
+  $('#border').click(function() {
+    clickToggle = !clickToggle;
+    console.log(clickToggle);
+  });
+
+    $('.box').mouseenter(function(){
+      if (clickToggle == true) {
+        var color = $(this).css('background-color');
+        $(this).css('background-color', colorToggle(color));
+      }
+  });
+};
+
+
+function colorToggle(color){
   var rint = Math.round(0xffffff * Math.random());
   var randomColor = ('#0' + rint.toString(16)).replace(/^#0([0-9a-f]{6})$/i, '#$1');
   var black = 'rgb(48, 48, 48)';
@@ -46,12 +63,13 @@ function randToggle(color){
 $(document).ready(function(){
 
   boxGen(boxSize);
+
   boxShow(oneToFour);
 
-  $('.box').mouseenter(function(){
-    var color = $(this).css('background-color');
-    $(this).css('background-color', randToggle(color));
-  });
+  draw(clickToggle);
+
+
+
 
   $('#shake').click(function(){
     $( "#border" ).effect( "shake" );
