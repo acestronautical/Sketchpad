@@ -26,7 +26,7 @@ $("#container" + parseInt(whichContainer)).css('display', 'block');
 
 function draw(clickToggle){
 
-  $('#border').click(function() {
+  $('#border').mouseup(function() {
     clickToggle = !clickToggle;
     console.log(clickToggle);
   });
@@ -41,19 +41,19 @@ function draw(clickToggle){
 
 
 function colorToggle(color){
-  var rint = Math.round(0xffffff * Math.random());
-  var randomColor = ('#' + rint.toString(16));
-  var black = 'rgb(48, 48, 48)';
-  var rgbArray = color.substring(4, color.length-1).replace(/ /g, '').split(',');
-  var shade = "rgb("+ (parseInt(rgbArray[0]) - 30) +"," + (parseInt(rgbArray[1]) - 30) + "," + (parseInt(rgbArray[2]) - 30) + ")";
-  var unshade = "rgb("+ (parseInt(rgbArray[0]) + 30) +"," + (parseInt(rgbArray[1]) + 30) + "," + (parseInt(rgbArray[2]) + 30) + ")";
   if(toggle === 'rainbow'){
+    var randomColor = ('#' + (Math.round(0xffffff * Math.random())).toString(16));
     return(randomColor);
   } else if(toggle === 'black'){
+    var black = 'rgb(48, 48, 48)';
     return(black);
   } else if(toggle === 'shading'){
+    var rgbArray = color.substring(4, color.length-1).replace(/ /g, '').split(',');
+    var shade = "rgb("+ (parseInt(rgbArray[0]) - 30) +"," + (parseInt(rgbArray[1]) - 30) + "," + (parseInt(rgbArray[2]) - 30) + ")";
     return(shade);
   } else if(toggle === 'unshading'){
+    var rgbArray = color.substring(4, color.length-1).replace(/ /g, '').split(',');
+    var unshade = "rgb("+ (parseInt(rgbArray[0]) + 30) +"," + (parseInt(rgbArray[1]) + 30) + "," + (parseInt(rgbArray[2]) + 30) + ")";
     return(unshade);
   } else if(toggle === 'picker'){
     return(pickerColor);
@@ -67,8 +67,6 @@ $(document).ready(function(){
   boxShow(oneToFour);
 
   draw(clickToggle);
-
-
 
 
   $('#shake').click(function(){
@@ -96,7 +94,7 @@ $(document).ready(function(){
     if(toggle != 'picker'){
       toggle = 'picker';
     }
-    pickerColor = ('#0' + Math.round(0xffffff * Math.random()).toString(16)).replace(/^#0([0-9a-f]{6})$/i, '#$1');
+    pickerColor = ('#' + (Math.round(0xffffff * Math.random())).toString(16));
     $('#colorPicker').css('background-color', pickerColor);
 
   });
@@ -109,8 +107,6 @@ $(document).ready(function(){
     }
     boxShow(oneToFour);
   });
-
-
 
 
 });

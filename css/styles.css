@@ -82,6 +82,8 @@ body{
 }
 
 #shake{
+  text-align: center;
+  line-height: 30px;
   background-color: hsla(0, 0%, 33%, 0.15);
   border: 1px solid hsla(0, 0%, 33%, 0.15);
   color: hsla(209, 100%, 87%, 0.45);
@@ -96,6 +98,10 @@ body{
   height: 30px;
   margin-left: -70px;
   overflow: hidden;
+}
+
+#shake:hover{
+  cursor: pointer;
 }
 
 .leftButton{
