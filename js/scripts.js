@@ -32,7 +32,7 @@ function draw(clickToggle){
   });
 
     $('.box').mouseenter(function(){
-      if (clickToggle == true) {
+      if (true) { //was clickToggle == true but I decided to remove this feature because it was confusing users
         var color = $(this).css('background-color');
         $(this).css('background-color', colorToggle(color));
       }
